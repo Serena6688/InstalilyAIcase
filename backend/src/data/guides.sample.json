@@ -1,0 +1,37 @@
+[
+  {
+    "id": "g1",
+    "title": "Dishwasher drain pump replacement",
+    "appliance": "dishwasher",
+    "partNumbers": ["PS11752778"],
+    "symptoms": ["not draining", "leaking"],
+    "content": "Safety first: unplug ... Step 1 ... Step 2 ...",
+    "sourceLabel": "Repair/install guide store (mock data)",
+    "uri": "https://www.partselect.com/..."
+  },
+  {
+    "id": "dw-not-draining",
+    "appliance": "dishwasher",
+    "title": "Dishwasher not draining",
+    "content": "If your dishwasher is not draining, first check the filter and sump for debris. Inspect the drain hose for kinks or clogs, and ensure the garbage disposal knockout plug has been removed. Listen for the drain pump during the drain cycle.",
+    "label": "Dishwasher troubleshooting guide",
+    "uri": "https://www.partselect.com/Repair/Dishwasher/Not-Draining/"
+  },
+  {
+    "id": "dw-drain-pump-install",
+    "appliance": "dishwasher",
+    "partNumber": "PS11752778",
+    "title": "Dishwasher drain pump replacement",
+    "content": "Disconnect power. Remove the lower access panel. Detach hoses from the drain pump and remove mounting screws. Install the new pump, reconnect hoses, and restore power.",
+    "label": "Drain pump installation guide",
+    "uri": "https://www.partselect.com/Repair/Dishwasher/Drain-Pump/"
+  },
+  {
+    "id": "fridge-ice-maker",
+    "appliance": "refrigerator",
+    "title": "Ice maker not working",
+    "content": "If the ice maker is not working, check the water supply line, ensure the freezer temperature is below 10°F, inspect the fill tube for ice blockage, and replace the water filter if clogged.",
+    "label": "Ice maker troubleshooting guide",
+    "uri": "https://www.partselect.com/Repair/Refrigerator/Ice-Maker/"
+  }
+]
