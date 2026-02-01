@@ -2,6 +2,8 @@
 
 A demo backend for an **appliance parts assistant** focused on **dishwashers and refrigerators**, supporting:
 
+youtube video link: https://youtu.be/-WGu6BZnxb0
+
 - Part compatibility checks (PS part ↔ model)
 - Step-by-step installation guidance
 - Structured troubleshooting flows
