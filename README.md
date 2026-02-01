@@ -2,7 +2,9 @@
 
 A demo backend for an **appliance parts assistant** focused on **dishwashers and refrigerators**, supporting:
 
-youtube video link: https://youtu.be/-WGu6BZnxb0
+## 🎥 Demo Video
+
+[![PartSelect Parts Assistant Demo](https://img.youtube.com/vi/-WGu6BZnxb0/0.jpg)](https://www.youtube.com/watch?v=-WGu6BZnxb0)
 
 - Part compatibility checks (PS part ↔ model)
 - Step-by-step installation guidance
