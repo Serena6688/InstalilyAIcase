@@ -14,45 +14,32 @@ This project intentionally combines **rule-based dialog control** with **LLM par
 
 ---
 
-## ✨ Why this project exists
+## Architecture Overview
 
-Most LLM chatbots struggle with:
-- Losing context across short follow-ups (“clamps”, “side”, “yes”)
-- Jumping intents unexpectedly (install → part lookup → home)
-- Over-using LLMs where simple logic would be more reliable
+**High-level flow**
 
-This project demonstrates a **hybrid approach**:
+Frontend  
+→ sends `message + history`  
+→ **router.ts** (main brain)
 
-> **State machine + intent router first**  
-> **LLM only as a fallback for ambiguous human language**
+**router.ts responsibilities**
+- Intent inference
+- Appliance pinning (dishwasher / refrigerator)
+- Dialog state tracking
+- Intent stickiness (no intent stealing)
 
----
+**Routing strategy**
+- Deterministic dialog flows (default)
+- LLM fallback (Groq) only when rule-based parsing fails
 
-## 🧠 Architecture Overview
+**LLM usage boundary**
+- Groq is used for **narrow semantic classification**
+- The LLM never controls dialog flow or routing decisions
 
-┌──────────┐
-│ Frontend │
-└────┬─────┘
-│ message + history
-▼
-┌────────────────────┐
-│ router.ts          │  ← main brain
-│  - intent inference│
-│  - appliance pin   │
-│  - dialog state    │
-│  - stickiness      │
-└────┬───────────────┘
-│
-├─ deterministic flows (most cases)
-│
-└─ Groq (only if needed)
-└─ groqHelpers.ts
-
-Key idea: **the LLM never decides the dialog flow** — it only helps parse *ambiguous natural language* when rules fail.
 
 ---
 
-## 🧩 Core Concepts
+## Core Concepts
 
 ### 1. Intent Stickiness (No Intent Stealing)
 
@@ -130,7 +117,7 @@ if (ps === "unknown") {
 
 ⸻
 
-📂 Project Structure
+Project Structure
 
 src/
 ├─ router.ts          # main dialog router & state machine
@@ -141,7 +128,7 @@ src/
 
 ⸻
 
-▶️ Running the Project
+Running the Project
 
 npm install
 npm run dev
